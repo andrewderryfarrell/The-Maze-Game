@@ -4,8 +4,6 @@ static var myTransform : Transform;
 static var target : Transform;
 
 function Update() {	
-	var number = parseInt(Random.Range(1, 5));
-	// Debug.Log("Number: " + number);
 	player = GameObject.Find("Player");
 	
 	// Debug.Log(player.transform.position);
