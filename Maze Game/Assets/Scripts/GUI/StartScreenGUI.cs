@@ -52,7 +52,7 @@ public class StartScreenGUI : MonoBehaviour
         if (GUI.Button(new Rect(Screen.width * .25f, Screen.height * playButtonYAxis, Screen.width * .5f, Screen.height * .1f), "Play Game", buttonStyle))
         {
             //Pressed
-            Application.LoadLevel("Game");
+            Application.LoadLevel(1);
         }
 
         //Load Level Button
