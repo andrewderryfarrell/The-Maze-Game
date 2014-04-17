@@ -12,14 +12,32 @@ public class StartScreenGUI : MonoBehaviour
     public GUIStyle buttonStyle;
     public GUIStyle titleStyle;
 
-    private float x = 1600.0f;
-    private float y = 900.0f;
+    private Vector2 resolution;
+    private float correctWidth = 1600.0f;
+    private float correctHeight = 729.0f;
+    private float x;
+    private float y;
 
+    void Start()
+    {
+        resolution = new Vector2(Screen.width, Screen.height);
+        x = Screen.width / correctWidth;
+        y = Screen.height / correctHeight;
+    }
 
     void Update()
     {
+        if (Screen.width != resolution.x || Screen.height != resolution.y)
+        {
+            resolution = new Vector2(Screen.width, Screen.height);
+            x = Screen.width / correctWidth;
+            y = Screen.height / correctHeight;
+        }
+
+
         if (Input.GetKeyDown(KeyCode.P))
         {
+            Variables.level = 1;
             Application.LoadLevel(1);
         }
         else if (Input.GetKeyDown(KeyCode.L))
@@ -38,12 +56,12 @@ public class StartScreenGUI : MonoBehaviour
     {
         titleStyle = new GUIStyle(GUI.skin.label);
         titleStyle.normal.textColor = Color.green;
-        titleStyle.fontSize = (int)(.25f * Screen.height);
+        titleStyle.fontSize = (int)((x * correctWidth) / 9);
         titleStyle.fontStyle = FontStyle.Bold;
         titleStyle.font = (Font)Resources.Load("windows_command_prompt");
 
-        GUI.Label(new Rect(Screen.width * .42f, Screen.height * titleLabelYAxis1, Screen.width, Screen.height * .2f), "The", titleStyle);
-        GUI.Label(new Rect(Screen.width * .28f, Screen.height * titleLabelYAxis2, Screen.width, Screen.height * .2f), "Maze Game", titleStyle);
+        GUI.Label(new Rect(x * correctWidth * .42f, y * correctHeight * titleLabelYAxis1, x * correctWidth, y * correctHeight * .2f), "The", titleStyle);
+        GUI.Label(new Rect(x * correctWidth * .28f, y * correctHeight * titleLabelYAxis2, x * correctWidth, y * correctHeight * .2f), "Maze Game", titleStyle);
 
         //Button Style
         buttonStyle = new GUIStyle(GUI.skin.button);
@@ -51,21 +69,22 @@ public class StartScreenGUI : MonoBehaviour
         buttonStyle.hover.textColor = Color.cyan;
         buttonStyle.focused.textColor = Color.cyan;
         buttonStyle.alignment = TextAnchor.MiddleCenter;
-        buttonStyle.fontSize = (int)(.07f * Screen.height);
+        buttonStyle.fontSize = (int)((x * correctWidth) / 31);
         buttonStyle.fontStyle = FontStyle.Italic;
         buttonStyle.font = (Font)Resources.Load("windows_command_prompt");
 
         //Play Game Button
         GUI.SetNextControlName("Play");
-        if (GUI.Button(new Rect(Screen.width * .25f, Screen.height * playButtonYAxis, Screen.width * .5f, Screen.height * .1f), "Play Game", buttonStyle))
+        if (GUI.Button(new Rect(x * correctWidth * .25f, y * correctHeight * playButtonYAxis, x * correctWidth * .5f, y * correctHeight * .1f), "Play Game", buttonStyle))
         {
             //Pressed
+            Variables.level = 1;
             Application.LoadLevel(1);
         }
 
         //Load Level Button
         GUI.SetNextControlName("Load");
-        if (GUI.Button(new Rect(Screen.width * .25f, Screen.height * loadButtonYAxis, Screen.width * .5f, Screen.height * .1f), "Load Level", buttonStyle))
+        if (GUI.Button(new Rect(x * correctWidth * .25f, y * correctHeight * loadButtonYAxis, x * correctWidth * .5f, y * correctHeight * .1f), "Load Level", buttonStyle))
         {
             //Pressed
             Application.LoadLevel("LoadLevelScreen");
@@ -73,7 +92,7 @@ public class StartScreenGUI : MonoBehaviour
 
         //Exit Game Button
         GUI.SetNextControlName("Exit");
-        if (GUI.Button(new Rect(Screen.width * .25f, Screen.height * exitButtonYAxis, Screen.width * .5f, Screen.height * .1f), "Exit Game", buttonStyle))
+        if (GUI.Button(new Rect(x * correctWidth * .25f, y * correctHeight * exitButtonYAxis, x * correctWidth * .5f, y * correctHeight * .1f), "Exit Game", buttonStyle))
         {
             //Pressed
             Application.Quit();

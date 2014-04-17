@@ -1,14 +1,22 @@
 ﻿static var level : int = 1;
 static var titleStyle : GUIStyle;
 
+private var csScript : Variables;
+
 function Start() {
-	GoToNextLevel();
+    GoToNextLevel();
+    csScript = this.GetComponent("Variables");
 }
 
 function GoToNextLevel() {
 	yield WaitForSeconds(5);
-	level++;
-	Application.LoadLevel("Level" + level);	
+	csScript.level = csScript.level + 1;
+	if(csScript.level > 6)
+	{
+        //Go to first level if at the last level
+	    csScript.level = 1;
+	}
+	Application.LoadLevel("Level" + csScript.level);	
 }
 
 function OnGUI() {

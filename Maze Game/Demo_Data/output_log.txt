@@ -17,19 +17,26 @@ Platform assembly: C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_D
 Loading C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.339 seconds
+- Completed reload, in  0.376 seconds
 desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-UnloadTime: 0.331709 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+UnloadTime: 0.405493 ms
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 125.
-Total: 0.896961 ms (FindLiveObjects: 0.010265 ms CreateObjectMapping: 0.010265 ms MarkObjects: 0.307969 ms  DeleteObjects: 0.071217 ms)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 205.
+Total: 1.085593 ms (FindLiveObjects: 0.021814 ms CreateObjectMapping: 0.016040 ms MarkObjects: 0.177724 ms  DeleteObjects: 0.057102 ms)
 
-UnloadTime: 0.268190 ms
+Platform assembly: C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_Data\Managed\Boo.Lang.dll (this message is harmless)
+UnloadTime: 1.081101 ms
 Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 128.
-Total: 0.902736 ms (FindLiveObjects: 0.007057 ms CreateObjectMapping: 0.010265 ms MarkObjects: 0.195047 ms  DeleteObjects: 0.064160 ms)
+Unloading 7 unused Assets to reduce memory usage. Loaded Objects now: 135.
+Total: 13.244619 ms (FindLiveObjects: 0.008340 ms CreateObjectMapping: 0.010265 ms MarkObjects: 0.183498 ms  DeleteObjects: 12.275799 ms)
+
+UnloadTime: 0.357373 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 210.
+Total: 0.833442 ms (FindLiveObjects: 0.009624 ms CreateObjectMapping: 0.010907 ms MarkObjects: 0.247658 ms  DeleteObjects: 0.059669 ms)
 
