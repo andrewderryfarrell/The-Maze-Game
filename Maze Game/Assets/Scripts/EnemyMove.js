@@ -17,7 +17,7 @@ function Update() {
 	
 	// Debug.Log("distance = " + distance);
 	
-	if (distance < 0.35) {
+	if (distance < 0.30) {
 		// Debug.Log(count);
 		// count++;
 		Application.LoadLevel("CaughtScreen");
