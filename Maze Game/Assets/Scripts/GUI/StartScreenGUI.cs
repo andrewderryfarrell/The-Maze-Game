@@ -3,14 +3,14 @@ using System.Collections;
 
 public class StartScreenGUI : MonoBehaviour 
 {
-    public float titleLabelYAxis;
+    public float titleLabelYAxis1;
+    public float titleLabelYAxis2;
     public float playButtonYAxis;
     public float loadButtonYAxis;
     public float exitButtonYAxis;
     
     public GUIStyle buttonStyle;
     public GUIStyle titleStyle;
-    private bool isFirst = true;
 
 
     void Update()
@@ -21,7 +21,7 @@ public class StartScreenGUI : MonoBehaviour
         }
         else if (Input.GetKeyDown(KeyCode.L))
         {
-            print("You want to load a level");
+            Application.LoadLevel("LoadLevelScreen");
         }
         else if (Input.GetKeyDown(KeyCode.E) || Input.GetKeyDown(KeyCode.Escape))
         {
@@ -35,8 +35,10 @@ public class StartScreenGUI : MonoBehaviour
         titleStyle.normal.textColor = Color.green;
         titleStyle.fontSize = (int)(.16f * Screen.height);
         titleStyle.fontStyle = FontStyle.Bold;
+        titleStyle.font = (Font)Resources.Load("Petyka - Retro Computer___SHORT");
 
-        GUI.Label(new Rect(Screen.width * .20f, Screen.height * titleLabelYAxis, Screen.width, Screen.height * .2f), "The Maze Game", titleStyle);
+        GUI.Label(new Rect(Screen.width * .40f, Screen.height * titleLabelYAxis1, Screen.width, Screen.height * .2f), "The", titleStyle);
+        GUI.Label(new Rect(Screen.width * .22f, Screen.height * titleLabelYAxis2, Screen.width, Screen.height * .2f), "Maze Game", titleStyle);
 
         //Button Style
         buttonStyle = new GUIStyle(GUI.skin.button);
@@ -44,8 +46,9 @@ public class StartScreenGUI : MonoBehaviour
         buttonStyle.hover.textColor = Color.cyan;
         buttonStyle.focused.textColor = Color.cyan;
         buttonStyle.alignment = TextAnchor.MiddleCenter;
-        buttonStyle.fontSize = (int)(.07f * Screen.height);
+        buttonStyle.fontSize = (int)(.05f * Screen.height);
         buttonStyle.fontStyle = FontStyle.Italic;
+        buttonStyle.font = (Font)Resources.Load("Petyka - Retro Computer___SHORT");
 
         //Play Game Button
         GUI.SetNextControlName("Play");
@@ -60,7 +63,7 @@ public class StartScreenGUI : MonoBehaviour
         if (GUI.Button(new Rect(Screen.width * .25f, Screen.height * loadButtonYAxis, Screen.width * .5f, Screen.height * .1f), "Load Level", buttonStyle))
         {
             //Pressed
-            print("You clicked the Load Level Button!");
+            Application.LoadLevel("LoadLevelScreen");
         }
 
         //Exit Game Button
