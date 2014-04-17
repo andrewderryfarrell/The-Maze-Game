@@ -17,22 +17,19 @@ Platform assembly: C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_D
 Loading C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\Andy\Documents\GitHub\The-Maze-Game\Maze Game\Demo_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.326 seconds
+- Completed reload, in  0.339 seconds
 desktop: 1600x900 60Hz; virtual: 1600x900 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Level 'Game' (-1) couldn't be loaded because it has not been added to the build settings.
-To add a level to the build settings use the menu File->Build Settings...
- 
-(Filename:  Line: 292)
+UnloadTime: 0.331709 ms
+Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Level 'Game' (-1) couldn't be loaded because it has not been added to the build settings.
-To add a level to the build settings use the menu File->Build Settings...
- 
-(Filename:  Line: 292)
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 125.
+Total: 0.896961 ms (FindLiveObjects: 0.010265 ms CreateObjectMapping: 0.010265 ms MarkObjects: 0.307969 ms  DeleteObjects: 0.071217 ms)
 
-Level 'Game' (-1) couldn't be loaded because it has not been added to the build settings.
-To add a level to the build settings use the menu File->Build Settings...
- 
-(Filename:  Line: 292)
+UnloadTime: 0.268190 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 4 unused Assets to reduce memory usage. Loaded Objects now: 128.
+Total: 0.902736 ms (FindLiveObjects: 0.007057 ms CreateObjectMapping: 0.010265 ms MarkObjects: 0.195047 ms  DeleteObjects: 0.064160 ms)
 

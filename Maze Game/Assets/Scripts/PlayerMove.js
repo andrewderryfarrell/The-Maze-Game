@@ -2,6 +2,7 @@
 static var time : float;
 static var updatedTime : String;
 static var titleStyle : GUIStyle;
+static var level : int;
      
 function Start() {
 	time = 0.0;

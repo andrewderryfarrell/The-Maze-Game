@@ -20,7 +20,7 @@ function Update() {
 	if (distance < 0.35) {
 		// Debug.Log(count);
 		// count++;
-		Application.LoadLevel("Scene_GameOver");
+		Application.LoadLevel("CaughtScreen");
 	} 
 	
 	myTransform.rotation = Quaternion.Slerp(myTransform.rotation,

@@ -12,6 +12,9 @@ public class StartScreenGUI : MonoBehaviour
     public GUIStyle buttonStyle;
     public GUIStyle titleStyle;
 
+    private float x = 1600.0f;
+    private float y = 900.0f;
+
 
     void Update()
     {
@@ -27,18 +30,20 @@ public class StartScreenGUI : MonoBehaviour
         {
             Application.Quit();
         }
+
+
     }
 
     void OnGUI()
     {
         titleStyle = new GUIStyle(GUI.skin.label);
         titleStyle.normal.textColor = Color.green;
-        titleStyle.fontSize = (int)(.16f * Screen.height);
+        titleStyle.fontSize = (int)(.25f * Screen.height);
         titleStyle.fontStyle = FontStyle.Bold;
-        titleStyle.font = (Font)Resources.Load("Petyka - Retro Computer___SHORT");
+        titleStyle.font = (Font)Resources.Load("windows_command_prompt");
 
-        GUI.Label(new Rect(Screen.width * .40f, Screen.height * titleLabelYAxis1, Screen.width, Screen.height * .2f), "The", titleStyle);
-        GUI.Label(new Rect(Screen.width * .22f, Screen.height * titleLabelYAxis2, Screen.width, Screen.height * .2f), "Maze Game", titleStyle);
+        GUI.Label(new Rect(Screen.width * .42f, Screen.height * titleLabelYAxis1, Screen.width, Screen.height * .2f), "The", titleStyle);
+        GUI.Label(new Rect(Screen.width * .28f, Screen.height * titleLabelYAxis2, Screen.width, Screen.height * .2f), "Maze Game", titleStyle);
 
         //Button Style
         buttonStyle = new GUIStyle(GUI.skin.button);
@@ -46,9 +51,9 @@ public class StartScreenGUI : MonoBehaviour
         buttonStyle.hover.textColor = Color.cyan;
         buttonStyle.focused.textColor = Color.cyan;
         buttonStyle.alignment = TextAnchor.MiddleCenter;
-        buttonStyle.fontSize = (int)(.05f * Screen.height);
+        buttonStyle.fontSize = (int)(.07f * Screen.height);
         buttonStyle.fontStyle = FontStyle.Italic;
-        buttonStyle.font = (Font)Resources.Load("Petyka - Retro Computer___SHORT");
+        buttonStyle.font = (Font)Resources.Load("windows_command_prompt");
 
         //Play Game Button
         GUI.SetNextControlName("Play");
