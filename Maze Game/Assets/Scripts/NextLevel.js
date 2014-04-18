@@ -9,8 +9,8 @@ function Start() {
 }
 
 function GoToNextLevel() {
+    csScript.level = csScript.level + 1;
 	yield WaitForSeconds(5);
-	csScript.level = csScript.level + 1;
 	if(csScript.level > 6)
 	{
         //Go to first level if at the last level

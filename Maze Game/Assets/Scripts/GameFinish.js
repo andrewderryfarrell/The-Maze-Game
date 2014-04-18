@@ -4,6 +4,6 @@ function Update() {
 	player = GameObject.Find("Cube");
 	
 	if (player == null) {
-		Application.LoadLevel("NextLevelScreen");
+		Application.LoadLevel("NextLevelCmdScreen");
 	}
 }
