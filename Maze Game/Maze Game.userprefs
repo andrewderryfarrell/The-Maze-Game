@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NextLevel.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\PlayerMove.js">
     <Files>
       <File FileName="Assets\Scripts\ObjectTouched.js" Line="24" Column="2" />
-      <File FileName="Assets\Scripts\PlayerMove.js" Line="139" Column="2" />
+      <File FileName="Assets\Scripts\PlayerMove.js" Line="140" Column="2" />
       <File FileName="Assets\Scripts\NextLevel.js" Line="20" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>

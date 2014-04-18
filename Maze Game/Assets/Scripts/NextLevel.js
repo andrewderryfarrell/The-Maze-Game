@@ -23,6 +23,6 @@ function OnGUI() {
 	titleStyle = new GUIStyle();
 	titleStyle.font = Resources.Load("windows_command_prompt", Font);
 	titleStyle.normal.textColor = Color.white;
-	titleStyle.fontSize = 64;
-	GUI.Label (Rect ((Screen.width / 2) - (Screen.width / 15), 8 * Screen.height / 10, Screen.width, Screen.height), PlayerMove.updatedTime, titleStyle);
+	titleStyle.fontSize = 24;
+	GUI.Label (Rect (10, 10, 500, 100), PlayerMove.updatedTime, titleStyle);
 }
