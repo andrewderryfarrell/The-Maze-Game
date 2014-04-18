@@ -4,8 +4,17 @@ static var myTransform : Transform;
 static var target : Transform;
 static var count : int = 1;
 
+function SlowDown() {
+	yield WaitForSeconds(5);
+	speed = 3;
+}
+
 function Update() {	
 	player = GameObject.Find("Player");
+	
+	if (speed == 2) {
+		SlowDown();
+	}	
 	
 	// Debug.Log(player.transform.position);
 	
@@ -13,7 +22,7 @@ function Update() {
 	
 	target = player.transform;
 	
-	var distance = Vector3.Distance(myTransform.position, target.position);
+	var distance = Mathf.Sqrt(Mathf.Pow(myTransform.position.x - target.position.x, 2) + Mathf.Pow(myTransform.position.y - target.position.y, 2));
 	
 	// Debug.Log("distance = " + distance);
 	

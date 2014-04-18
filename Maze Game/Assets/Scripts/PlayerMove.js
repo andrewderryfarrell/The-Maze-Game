@@ -13,8 +13,16 @@ function Start() {
 	//directionMoved = 0;
 	//count = 0;
 }	
-     
+  
+function SpeedUp() {
+	yield WaitForSeconds(5);
+	speed = 3;
+}	
+           
 function Update () {
+	if (speed == 4) {
+		SpeedUp();
+	}
 	time += Time.deltaTime;
 	
 	var minutes = Mathf.FloorToInt(time / 60);
