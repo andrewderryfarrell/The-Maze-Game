@@ -11,8 +11,8 @@ function Update() {
 	
 	target = player.transform;
 	
-	var distance = Vector3.Distance(myTransform.position, target.position);
-	
+	// var distance = Vector3.Distance(myTransform.position, target.position);
+	var distance = Mathf.Sqrt(Mathf.Pow(myTransform.position.x - target.position.x, 2) + Mathf.Pow(myTransform.position.y - target.position.y, 2));
 	// Debug.Log("distance = " + distance);
 	
 	if (distance < 0.35) {
