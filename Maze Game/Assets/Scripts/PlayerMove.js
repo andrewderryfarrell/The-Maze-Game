@@ -3,15 +3,15 @@ static var time : float;
 static var updatedTime : String;
 static var titleStyle : GUIStyle;
 static var level : int;
-static var newSprite : Sprite;
-static var directionMoved : int; // 0 = north, 1 = east, 2 = south, 3 = west
-static var count : int;
+//static var newSprite : Sprite;
+//static var directionMoved : int; // 0 = north, 1 = east, 2 = south, 3 = west
+//static var count : int;
      
 function Start() {
 	time = 0.0;
 	updatedTime = "";
-	directionMoved = 0;
-	count = 0;
+	//directionMoved = 0;
+	//count = 0;
 }	
      
 function Update () {
@@ -21,7 +21,7 @@ function Update () {
 	var seconds = 0;
 	var milliseconds = "";
 	var index = -1;
-		
+	/*
 	newSprite = Sprite();
 		
 	if (count == 1000000) {
@@ -39,6 +39,7 @@ function Update () {
 	}	
 	
 	this.GetComponent(SpriteRenderer).sprite = newSprite;
+	*/
 		
 	if (minutes > 0) {
 		seconds = Mathf.Floor(time - minutes * 60);
@@ -72,10 +73,11 @@ function Update () {
 		// Debug.Log(updatedTime);
 	}
 	
-	newSprite = Sprite();
+	// newSprite = Sprite();
 	
 	if (Input.GetKey (KeyCode.UpArrow) || Input.GetKey (KeyCode.W)) {
 		// Debug.Log("UP");
+		/*
 		if (count % 27 == 1 || count % 27 == 2 || count % 27 == 3 || count % 27 == 4 || count % 27 == 5 || count % 27 == 6 || count % 27 == 7 || count % 27 == 8 || count % 27 == 9) {
 			newSprite = Resources.Load("player_walk_one_north", Sprite);
 		} else if (count % 27 == 10 || count % 27 == 11 || count % 27 == 12 || count % 27 == 13 || count % 27 == 14 || count % 27 == 15 || count % 27 == 16 || count % 27 == 17 || count % 27 == 18) {
@@ -85,10 +87,12 @@ function Update () {
 		}
 		directionMoved = 0;
 		this.GetComponent(SpriteRenderer).sprite = newSprite;
+		*/
 		transform.Translate (Vector3(0,1,0) * Time.deltaTime*speed);	
 		
 	} else if (Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.S)) {
 		// Debug.Log("DOWN");
+		/*
 		if (count % 27 == 1 || count % 27 == 2 || count % 27 == 3 || count % 27 == 4 || count % 27 == 5 || count % 27 == 6 || count % 27 == 7 || count % 27 == 8 || count % 27 == 9) {
 			newSprite = Resources.Load("player_walk_one_south", Sprite);
 		}else if (count % 27 == 10 || count % 27 == 11 || count % 27 == 12 || count % 27 == 13 || count % 27 == 14 || count % 27 == 15 || count % 27 == 16 || count % 27 == 17 || count % 27 == 18) {
@@ -98,10 +102,12 @@ function Update () {
 		}
 		directionMoved = 2;
 		this.GetComponent(SpriteRenderer).sprite = newSprite;
+		*/
 		transform.Translate (Vector3(0,-1,0) * Time.deltaTime*speed);	
 		
 	} else if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
 		// Debug.Log("LEFT");
+		/*
 		if (count % 27 == 1 || count % 27 == 2 || count % 27 == 3 || count % 27 == 4 || count % 27 == 5 || count % 27 == 6 || count % 27 == 7 || count % 27 == 8 || count % 27 == 9) {
 			newSprite = Resources.Load("player_walk_one_west", Sprite);
 		} else if (count % 27 == 10 || count % 27 == 11 || count % 27 == 12 || count % 27 == 13 || count % 27 == 14 || count % 27 == 15 || count % 27 == 16 || count % 27 == 17 || count % 27 == 18) {
@@ -111,10 +117,12 @@ function Update () {
 		}
 		directionMoved = 3;
 		this.GetComponent(SpriteRenderer).sprite = newSprite;
+		*/
 		transform.Translate (Vector3(-1,0,0) * Time.deltaTime*speed);	
 		
 	} else if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
 		// Debug.Log("RIGHT");
+		/*
 		if (count % 27 == 1 || count % 27 == 2 || count % 27 == 3 || count % 27 == 4 || count % 27 == 5 || count % 27 == 6 || count % 27 == 7 || count % 27 == 8 || count % 27 == 9) {
 			newSprite = Resources.Load("player_walk_one_east", Sprite);
 		} else if (count % 27 == 10 || count % 27 == 11 || count % 27 == 12 || count % 27 == 13 || count % 27 == 14 || count % 27 == 15 || count % 27 == 16 || count % 27 == 17 || count % 27 == 18) {
@@ -124,10 +132,11 @@ function Update () {
 		}
 		directionMoved = 1;
 		this.GetComponent(SpriteRenderer).sprite = newSprite;
+		*/
 		transform.Translate (Vector3(1,0,0) * Time.deltaTime*speed);	
 	}
 	
-	count++;
+	// count++;
 }
 
 function OnGUI () {

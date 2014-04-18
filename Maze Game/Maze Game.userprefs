@@ -1,10 +1,10 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\EnemyMove.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\NextLevel.js">
     <Files>
-      <File FileName="Assets\Scripts\EnemyMove.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\PlayerMove.js" Line="1" Column="1" />
-      <File FileName="Assets\Scripts\NextLevel.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\ObjectTouched.js" Line="24" Column="2" />
+      <File FileName="Assets\Scripts\PlayerMove.js" Line="139" Column="2" />
+      <File FileName="Assets\Scripts\NextLevel.js" Line="20" Column="2" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
