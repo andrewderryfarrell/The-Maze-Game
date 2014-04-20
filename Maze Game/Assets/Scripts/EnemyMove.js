@@ -29,8 +29,6 @@ function Update() {
 	if (distance < 0.30) {
 		// Debug.Log(count);
 		// count++;
-		PlayerMove.speed = 3;
-		EnemyMove.speed = 3;
 		Application.LoadLevel("CaughtScreen");
 	} 
 	
