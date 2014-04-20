@@ -10,11 +10,11 @@ function SlowDown() {
 }
 
 function Update() {	
-	player = GameObject.Find("Player");
-	
 	if (speed == 2) {
 		SlowDown();
-	}	
+	}
+
+	player = GameObject.Find("Player");	
 	
 	// Debug.Log(player.transform.position);
 	
