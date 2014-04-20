@@ -7,9 +7,9 @@ function Update() {
 	
 	// Debug.Log(player.transform.position);
 	
-	myTransform = this.transform;
 	
 	target = player.transform;
 	
-	myTransform.position = target.position;
+	transform.position.x = target.position.x;
+	transform.position.y = target.position.y;
 }
