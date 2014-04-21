@@ -16,7 +16,7 @@ function Start() {
   
 function SpeedUp() {
 	yield WaitForSeconds(5);
-	speed = 3;
+	speed = 3; 
 }
            
 function Update () {
