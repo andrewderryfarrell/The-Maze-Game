@@ -3,10 +3,15 @@ static var player : GameObject;
 static var myTransform : Transform;
 static var target : Transform;
 static var count : int = 1;
+static var zPos : float;
 
 function SlowDown() {
 	yield WaitForSeconds(5);
 	speed = 3;
+}
+
+function Start() {
+	zPos = transform.position.z;
 }
 
 function Update() {	
@@ -31,12 +36,20 @@ function Update() {
 		// count++;
 		Application.LoadLevel("CaughtScreen");
 	} 
+	if (distance > 3.5) {
+		myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
+						   Random.rotation,
+						   Time.deltaTime * speed); 
 	
-	myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
+		myTransform.position += myTransform.forward * Time.deltaTime * speed;
+		myTransform.position.z = zPos;
+	} else {
+		myTransform.rotation = Quaternion.Slerp(myTransform.rotation,
 						   Quaternion.LookRotation(target.position - myTransform.position), 
 						   Time.deltaTime * speed); 
 	
-	myTransform.position += myTransform.forward * Time.deltaTime * speed;
+		myTransform.position += myTransform.forward * Time.deltaTime * speed;
+	}
 }
 
 function OnCollisionEnter2D (collision : Collision2D) {

@@ -2,7 +2,8 @@
 static var time : float;
 static var updatedTime : String;
 static var titleStyle : GUIStyle;
-static var level : int;
+static var level : float;
+
 //static var newSprite : Sprite;
 //static var directionMoved : int; // 0 = north, 1 = east, 2 = south, 3 = west
 //static var count : int;
@@ -98,7 +99,9 @@ function Update () {
 		*/
 		transform.Translate (Vector3(0,1,0) * Time.deltaTime*speed);	
 		
-	} else if (Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.S)) {
+	}
+	
+	if (Input.GetKey (KeyCode.DownArrow) || Input.GetKey (KeyCode.S)) {
 		// Debug.Log("DOWN");
 		/*
 		if (count % 27 == 1 || count % 27 == 2 || count % 27 == 3 || count % 27 == 4 || count % 27 == 5 || count % 27 == 6 || count % 27 == 7 || count % 27 == 8 || count % 27 == 9) {
@@ -113,7 +116,9 @@ function Update () {
 		*/
 		transform.Translate (Vector3(0,-1,0) * Time.deltaTime*speed);	
 		
-	} else if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
+	}
+	
+	if (Input.GetKey (KeyCode.LeftArrow) || Input.GetKey (KeyCode.A)) {
 		// Debug.Log("LEFT");
 		/*
 		if (count % 27 == 1 || count % 27 == 2 || count % 27 == 3 || count % 27 == 4 || count % 27 == 5 || count % 27 == 6 || count % 27 == 7 || count % 27 == 8 || count % 27 == 9) {
@@ -128,7 +133,9 @@ function Update () {
 		*/
 		transform.Translate (Vector3(-1,0,0) * Time.deltaTime*speed);	
 		
-	} else if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
+	}
+	
+	if (Input.GetKey (KeyCode.RightArrow) || Input.GetKey (KeyCode.D)) {
 		// Debug.Log("RIGHT");
 		/*
 		if (count % 27 == 1 || count % 27 == 2 || count % 27 == 3 || count % 27 == 4 || count % 27 == 5 || count % 27 == 6 || count % 27 == 7 || count % 27 == 8 || count % 27 == 9) {
@@ -143,7 +150,6 @@ function Update () {
 		*/
 		transform.Translate (Vector3(1,0,0) * Time.deltaTime*speed);	
 	}
-	
 	// count++;
 }
 
